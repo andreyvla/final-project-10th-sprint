@@ -23,7 +23,7 @@ touch /task/dir2/empty
 
 touch /task/dir2/hello.sh
 echo '#!/bin/bash
-echo "$1, привет!"'
+echo "$1, привет!"' > /task/dir2/hello.sh
 
 # устанавливаем для task/dir2/hello.sh права rwxrw-r--
 
@@ -70,7 +70,7 @@ cat /task/Практическое задание
 # ищем в файле "Практическое задание" строки, которые содержат слово "dir"
 # и затем отсортировываем их
 
-grep | sort -n "dir" /task/Практическое задание
+grep -n "dir" /task/Практическое задание | sort
 
 
 # меняем текущую директорию на родительскую для task
